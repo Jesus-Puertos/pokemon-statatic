@@ -1,0 +1,46 @@
+---
+// import ViewTransitions from "astro/components/ViewTransitions.astro";
+import { siteInfo } from "src/const/site-info";
+
+interface Props {
+    title: string;
+    image?: string;
+    description?: string;
+    author?: string;
+}
+const {
+    title = siteInfo.title,
+    description = siteInfo.description,
+    image,
+    author = siteInfo.author,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- SEO -->
+        <meta name="description" content={description} />
+        <meta name="author" content={author} />
+
+        <!-- OG MetaTAGS -->
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={image} />
+
+        <title>{title}</title>
+        <!-- <ViewTransitions /> -->
+    </head>
+    <body class="bg-slate-800 text-slate-100 m-auto max-w-3xl">
+        <main class="mt-10">
+            <slot />
+        </main>
+    </body>
+</html>
+<style>
+    @view-transition {
+        navigation: auto; /* enabled! */
+    }
+</style>
