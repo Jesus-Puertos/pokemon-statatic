@@ -1,0 +1,21 @@
+---
+import { Counter } from "@componentsCounter";
+import Titled from "@componentsshared/Titled.astro";
+import MainLayout from "@layouts/MainLayout.astro";
+---
+
+<MainLayout title="Favoritos">
+    <Titled>El poder de astro</Titled>
+    <video controls="" autoplay="" transition:persist="playing-video">
+        <source
+            src="https://ia804502.us.archive.org/33/items/GoldenGa1939_3/GoldenGa1939_3_512kb.mp4"
+            type="video/mp4"
+        />
+    </video>
+    <Counter
+        transition:persist="counter"
+        transiton:persist-props
+        client:visible
+        initValue={15}
+    />
+</MainLayout>

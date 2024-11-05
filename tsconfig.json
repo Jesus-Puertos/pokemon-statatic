@@ -4,7 +4,7 @@
     "baseUrl": ".",
     "paths": {
       "@components*": [
-        "./src/components/*",
+        "./src/components/*"
       ],
       "@interfaces/*": [
         "./src/interfaces/*"
@@ -12,6 +12,8 @@
       "@layouts/*": [
         "./src/Layouts/*"
       ]
-    }
+    },
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js"
   }
 }

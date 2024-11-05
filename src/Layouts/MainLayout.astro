@@ -1,5 +1,7 @@
 ---
 // import ViewTransitions from "astro/components/ViewTransitions.astro";
+import NavBar from "@componentsshared/NavBar.astro";
+import { ViewTransitions } from "astro:transitions";
 import { siteInfo } from "src/const/site-info";
 
 interface Props {
@@ -31,16 +33,17 @@ const {
         <meta property="og:image" content={image} />
 
         <title>{title}</title>
-        <!-- <ViewTransitions /> -->
+        <ViewTransitions />
     </head>
-    <body class="bg-slate-800 text-slate-100 m-auto max-w-3xl">
-        <main class="mt-10">
+    <body class="bg-slate-800 text-slate-100">
+        <NavBar />
+        <main class="mt-10 md:m-auto max-w-3xl mx-4">
             <slot />
         </main>
     </body>
 </html>
-<style>
+<!-- <style>
     @view-transition {
         navigation: auto; /* enabled! */
     }
-</style>
+</style> -->

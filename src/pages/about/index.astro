@@ -1,0 +1,52 @@
+---
+import Titled from "@componentsshared/Titled.astro";
+import MainLayout from "@layouts/MainLayout.astro";
+---
+
+<MainLayout title="Sobre este proyecto">
+    <Titled>Sobre este proyecto</Titled>
+    <p class="text-lg leading-relaxed">
+        Este proyecto fue desarrollado utilizando <span
+            class="font-bold text-yellow-500">Astro</span
+        >, un moderno framework para la creación de sitios web estáticos. Para
+        obtener los datos de los Pokémon, hemos integrado la API externa de <span
+            class="font-bold text-yellow-500">PokéAPI</span
+        >, que nos proporciona información detallada sobre cada Pokémon.
+    </p>
+    <p class="text-lg leading-relaxed mt-4">
+        El objetivo de este proyecto es demostrar cómo se puede construir una
+        aplicación web rápida y eficiente utilizando <span
+            class="font-bold text-yellow-500">Astro</span
+        > y <span class="font-bold text-yellow-500">Solid.js</span>, junto con
+        <span class="font-bold text-yellow-500">TailwindCSS</span> para el diseño
+        y estilo.
+    </p>
+    <p class="text-lg leading-relaxed mt-4">
+        Durante este proyecto, hemos aprendido cómo trabajar con <span
+            class="font-bold text-yellow-500">Astro</span
+        > y sus interesantes integraciones. Hemos aprendido a usar las islas y a
+        mantener el estado gracias a las directivas entre diferentes páginas. También
+        hemos aprendido a utilizar los eventos de <span
+            class="font-bold text-yellow-500">Astro</span
+        > para manejar el ciclo de vida de las páginas y a trabajar con el cliente
+        scripting para manipular el DOM. Además de los <span
+            class="font-bold text-yellow-500">view transitions</span
+        >
+        para mejorar la experiencia de usuario y cómo aplicarlos de manera nativa
+        y con la sintaxis que nos proporciona <span
+            class="font-bold text-yellow-500">Astro</span
+        >. También hemos aprendido a trabajar con las rutas dinámicas y a
+        manejar los parámetros de la URL.
+    </p>
+
+    <footer>
+        <p class="mt-20">
+            Este proyecto forma parte del <span class="font-semibold"
+                >Curso Astro.js</span
+            > de: <a
+                href="https://www.udemy.com/course/astro-guia-completa/"
+                class="text-blue-500 hover:underline">Fernando Herrera</a
+            >
+        </p>
+    </footer>
+</MainLayout>
